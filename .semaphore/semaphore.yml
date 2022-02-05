@@ -19,8 +19,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - bundle exec xcversion select 12.4
-            - bundle exec fastlane test
+            - bundle exec fastlane custom_lane
   - name: Build app
     task:
       env_vars:
@@ -30,8 +29,6 @@ blocks:
         - name: match-secrets
       prologue:
         commands:
-          - chmod 0600 ~/.ssh/*
-          - ssh-add ~/.ssh/*
           - checkout
           - cache restore
           - bundle install --path vendor/bundle
@@ -39,8 +36,7 @@ blocks:
       jobs:
         - name: Build
           commands:
-            - bundle exec xcversion select 12.4
-            - bundle exec fastlane build
+            - bundle exec fastlane custom_lane
             - artifact push job build/TallestTowers.ipa
   - name: Take screenshots
     task:
@@ -56,6 +52,5 @@ blocks:
       jobs:
         - name: Screenshots
           commands:
-            - bundle exec xcversion select 12.4
             - bundle exec fastlane screenshots
             - artifact push job screenshots

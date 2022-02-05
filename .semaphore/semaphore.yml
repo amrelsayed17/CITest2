@@ -36,7 +36,7 @@ blocks:
       jobs:
         - name: Build
           commands:
-            - bundle exec fastlane custom_lane00
+            - bundle exec fastlane custom_lane
             - artifact push job build/TallestTowers.ipa
   - name: Take screenshots
     task:

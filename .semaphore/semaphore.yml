@@ -19,7 +19,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - bundle exec fastlane custom_lane00
+            - bundle exec fastlane custom_lane
   - name: Build app
     task:
       env_vars:
@@ -54,6 +54,5 @@ blocks:
       jobs:
         - name: Screenshots
           commands:
-            - bundle exec xcversion select 12.4
             - bundle exec fastlane screenshots
             - artifact push job screenshots

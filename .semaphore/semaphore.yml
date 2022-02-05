@@ -29,8 +29,6 @@ blocks:
         - name: match-secrets
       prologue:
         commands:
-          - chmod 0600 ~/.ssh/*
-          - ssh-add User/mac/.ssh/match-secrets
           - checkout
           - cache restore
           - bundle install --path vendor/bundle

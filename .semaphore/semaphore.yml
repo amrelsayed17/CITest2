@@ -19,7 +19,6 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - bundle exec xcversion select 12.4
             - bundle exec fastlane test
   - name: Build app
     task:
@@ -39,7 +38,6 @@ blocks:
       jobs:
         - name: Build
           commands:
-            - bundle exec xcversion select 12.4
             - bundle exec fastlane build
             - artifact push job build/TallestTowers.ipa
   - name: Take screenshots

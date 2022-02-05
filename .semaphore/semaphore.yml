@@ -19,7 +19,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - bundle exec xcversion select 11.2.1
+            - bundle exec xcversion select 12.4
             - bundle exec fastlane test
   - name: Build app
     task:

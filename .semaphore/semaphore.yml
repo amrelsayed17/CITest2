@@ -19,7 +19,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - bundle exec fastlane test
+            - bundle exec fastlane custom_lane00
   - name: Build app
     task:
       env_vars:

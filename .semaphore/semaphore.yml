@@ -30,7 +30,7 @@ blocks:
       prologue:
         commands:
           - chmod 0600 ~/.ssh/*
-          - ssh-add ~/.ssh/match-secrets
+          - ssh-add ~/.ssh/id_rsa_semaphoreci
           - checkout
           - cache restore
           - bundle install --path vendor/bundle

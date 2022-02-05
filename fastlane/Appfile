@@ -1,5 +1,5 @@
-# app_identifier("mvvm.MVVMExample") # The bundle identifier of your app
-# apple_id("amrelsayed17@gmail.com") # Your Apple email address
+ app_identifier("mvvm.MVVMExample") # The bundle identifier of your app
+ apple_id("amrelsayed17@gmail.com") # Your Apple email address
 
 
 # For more information about the Appfile, see:
